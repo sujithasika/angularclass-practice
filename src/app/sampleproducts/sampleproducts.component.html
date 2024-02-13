@@ -1,0 +1,19 @@
+<table border="1" cellpadding="20">
+    <h1>{{heading}}</h1>
+    <tr>
+    <th>s.no</th>
+    <th>productname</th>
+    <th>productprice</th>
+    <th>Action</th>
+    </tr>
+    <tr *ngFor="let items of this.prod;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{items.productname}}</td>
+        <td>{{items.price}}</td>
+    </tr>
+       <tr>  
+         <button>edit</button> 
+        <button>delete</button> 
+     </tr>
+    <button type="button" (click)="displayproduct()">display</button> 
+</table>
